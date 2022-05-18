@@ -7,10 +7,11 @@ namespace Blackjack
     /// </summary>
     internal class Program
     {
-        static int StaticWeight = 10;
+        static int staticWeight = 10;
         static void Main(string[] args)
         {
-            Console.WriteLine("Приветствую! Давайте сыграем в игру \"Blackjack\"!\nСколько у вас карт на руках?");
+            Console.WriteLine("Приветствую! Давайте сыграем в игру \"Blackjack\"!" +
+                "\nСколько у вас карт на руках?");
             int cardCount = int.Parse(Console.ReadLine());
             int resultSum = 0;
             for (int i = 0; i < cardCount; i++)
@@ -31,8 +32,8 @@ namespace Blackjack
                         case ("T"):
                         case ("J"):
                         case ("K"):
-                            Console.WriteLine($"+ {StaticWeight} очков");
-                            resultSum += StaticWeight;
+                            Console.WriteLine($"+ {staticWeight} очков");
+                            resultSum += staticWeight;
                             break;
                         default:
                             Console.WriteLine("+ 0 очков");
@@ -44,7 +45,5 @@ namespace Blackjack
             Console.WriteLine("Спасибо за игру!");
             Console.ReadKey();
         }
-
-
     }
 }
