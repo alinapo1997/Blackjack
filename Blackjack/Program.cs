@@ -17,7 +17,7 @@ namespace Blackjack
             for (int i = 0; i < cardCount; i++)
             {
                 Console.WriteLine($"Введите номинал {i + 1} карты: ");
-                string stringNominal = Console.ReadLine();
+                string stringNominal = Console.ReadLine().Trim().ToUpper();
                 bool isInt = int.TryParse(stringNominal, out int intNominal);
                 if (isInt)
                 {
